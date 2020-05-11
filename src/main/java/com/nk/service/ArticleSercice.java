@@ -24,4 +24,12 @@ public class ArticleSercice {
     public List<Article> queryArticlesByUserId(Long id) {
         return articleMapper.queryArticlesByUserId(id);
     }
+
+    public int insert(Article article) {
+        return articleMapper.insert(article);
+    }
+
+    public int update2(Article article) {
+        return articleMapper.update2(article);
+    }
 }

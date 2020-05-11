@@ -19,4 +19,8 @@ public class CategoryService {
     public int insert(Category category) {
         return categoryMapper.insert(category);
     }
+
+    public Category queryCategoriesById(Long id) {
+        return categoryMapper.selectByPrimaryKey(id);
+    }
 }

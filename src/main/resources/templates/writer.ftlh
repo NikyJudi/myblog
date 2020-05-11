@@ -51,7 +51,7 @@
 
                     <ul class="list-group mt-3">
                         <#list categoryList as category>
-                            <li class="list-group-item"><a href="#">${category.name}</a></li>
+                            <li class="list-group-item"><a href="/writer?activeCid=${category.id}">${category.name}</a></li>
                         </#list>
                     </ul>
                 </div>
