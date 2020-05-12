@@ -110,11 +110,9 @@
        a.created_at,
        a.updated_at,
        u.nickname,
-       u.avatar,
-       count(c.article_id) comment_count
+       u.avatar
     from article a
          join user u on a.user_id = u.id
-         join comment c on a.id = c.article_id
     group by a.id
   </select>
     <select id="queryArticlesByUserId" resultMap="BaseResultMap" parameterType="java.lang.Long">

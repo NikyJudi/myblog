@@ -19,6 +19,9 @@
                 <div class="form-group row">
                     <div class="col-3">
                         <div class="input-group">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <a class="btn btn-block btn-lg btn-outline-secondary" href="/">首页</a>
+                            </div>
                         <div class="input-group-prepend">
                             <div class="input-group-text">类别</div>
                         </div>

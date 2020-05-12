@@ -18,4 +18,6 @@ public interface CommentMapper {
     int updateByPrimaryKey(Comment record);
 
     List<Comment> queryComments(Long id);
+
+    int queryCount(Integer id);
 }

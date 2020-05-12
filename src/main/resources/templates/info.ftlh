@@ -43,7 +43,9 @@
 
     <body>
         <div class="container">
-            <img src="${article.coverImage}" class="cover-image mb-3">
+            <div class="d-flex justify-content-end align-items-center">
+                <a class="btn btn-block btn-lg btn-outline-secondary" href="/">首页</a>
+            </div>
             <h1 class="text-center">${article.title}</h1>
             <div class="author-area">
                 <a>

@@ -51,4 +51,9 @@ from comment c
          join user u on c.user_id = u.id
 where c.article_id = #{id,jdbcType=BIGINT}
   </select>
+    <select id="queryCount" parameterType="java.lang.Integer" resultType="java.lang.Integer" >
+    select count(c.id)
+from comment c join article a on c.article_id = a.id
+where c.article_id = #{id,jdbcType=BIGINT}
+  </select>
 </mapper>

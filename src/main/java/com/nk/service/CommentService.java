@@ -20,4 +20,8 @@ public class CommentService {
     public int insert(Comment comment) {
         return commentMapper.insert(comment);
     }
+
+    public int queryCommentsCount(Long id) {
+        return commentMapper.queryCount(id.intValue());
+    }
 }

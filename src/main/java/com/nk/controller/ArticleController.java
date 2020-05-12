@@ -7,6 +7,7 @@ import com.nk.model.User;
 import com.nk.service.ArticleSercice;
 import com.nk.service.CategoryService;
 import com.nk.service.CommentService;
+import com.nk.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,6 +34,10 @@ public class ArticleController {
     @RequestMapping("/")
     public String index(Model model) {
         List<Article> articles = articleSercice.queryArticles();
+        for (Article article : articles) {
+            int num = commentService.queryCommentsCount(article.getId());
+            article.setCommentCount(num);
+        }
         model.addAttribute("articleList", articles);
         return "index";
     }
@@ -108,7 +113,7 @@ public class ArticleController {
             article.setId(Long.valueOf(id));
             int num = articleSercice.update2(article);
         }
-        return String.format("redirect:/writer/forward/2/%s/editor", id);
+        return "redirect:/writer";
     }
 
     @RequestMapping("/writer/forward/{articleId}/delete")

@@ -2,6 +2,7 @@ package com.nk.mapper;
 
 import com.nk.model.Article;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
