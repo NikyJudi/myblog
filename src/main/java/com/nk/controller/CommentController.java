@@ -25,7 +25,6 @@ public class CommentController {
         comment.setContent(content);
         comment.setCreatedAt(new Date());
         //感觉可以用session再添加信息
-        //TODO
         if (content != null) {
             int num = commentService.insert(comment);
         }
