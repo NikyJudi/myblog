@@ -48,12 +48,26 @@
                             <button type="submit" class="ml-2 btn btn-outline-secondary mb-2">新建</button>
                         </form>
                     </div>
-
-                    <ul class="list-group mt-3">
+                    <table class="table">
+                        <thead>
+                        <th scope="col">分类</th>
+                        <th scope="col">删除</th>
+                        </thead>
+                        <tbody>
                         <#list categoryList as category>
-                            <li class="list-group-item"><a href="/writer?activeCid=${category.id}">${category.name}</a></li>
+                            <tr>
+                                <td scope="row"><a href="/writer?activeCid=${category.id}">${category.name}</a></td>
+                                <td><a href="/writer/${category.id}/delete">删除</a></td>
+                            </tr>
                         </#list>
-                    </ul>
+                        </tbody>
+                    </table>
+<#--                    <ul class="list-group mt-3">-->
+<#--                        <#list categoryList as category>-->
+<#--                            <a href="/writer?activeCid=${category.id}">${category.name}</a>-->
+<#--                            <a href="/writer/forward/${category.id}/delete">删除</a>-->
+<#--                        </#list>-->
+<#--                    </ul>-->
                 </div>
 
                 <div class="col">
@@ -63,7 +77,6 @@
 
                     <table class="table">
                         <thead>
-                            <th scope="col">#</th>
                             <th scope="col">标题</th>
                             <th scope="col">阅读量</th>
                             <th scope="col">修改</th>
@@ -72,8 +85,7 @@
                         <tbody>
                             <#list articleList as article>
                             <tr>
-                                <td scope="row">${article.id}</td>
-                                <td>${article.title}</td>
+                                <td scope="row">${article.title}</td>
                                 <td>${article.viewCount}</td>
                                 <td><a href="/writer/forward/2/${article.id}/editor">修改</a></td>
                                 <td><a href="/writer/forward/${article.id}/delete">删除</a></td>

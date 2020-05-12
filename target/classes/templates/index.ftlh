@@ -130,11 +130,8 @@
             <div class="row">
                 <div class="offset-2 col-8">
                     <div class="row">
-                        <div class="col-4">
-                            <img class="qrcode" src="images/erweima.png">
-                        </div>
                         <div class="col align-middle">
-                            <p class="about">Powered by 陈沛鑫，扫描二维码，更多地了解我。</p>
+                            <p class="about">Powered by ningxigua &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;反馈邮箱：nk1825558925@outlook.com</p>
                         </div>
                     </div>
                 </div>
