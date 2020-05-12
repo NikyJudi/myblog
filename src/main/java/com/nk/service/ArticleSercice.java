@@ -32,4 +32,8 @@ public class ArticleSercice {
     public int update2(Article article) {
         return articleMapper.update2(article);
     }
+
+    public void delete(Long articleId) {
+        articleMapper.deleteByPrimaryKey(articleId);
+    }
 }

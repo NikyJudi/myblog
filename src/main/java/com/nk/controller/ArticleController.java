@@ -110,4 +110,11 @@ public class ArticleController {
         }
         return String.format("redirect:/writer/forward/2/%s/editor", id);
     }
+
+    @RequestMapping("/writer/forward/{articleId}/delete")
+    public String delete (@PathVariable("articleId") Long articleId) {
+
+        articleSercice.delete(articleId);
+        return "redirect:/writer";
+    }
 }

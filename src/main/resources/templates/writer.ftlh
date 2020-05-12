@@ -67,6 +67,7 @@
                             <th scope="col">标题</th>
                             <th scope="col">阅读量</th>
                             <th scope="col">修改</th>
+                            <th scope="col">删除</th>
                         </thead>
                         <tbody>
                             <#list articleList as article>
@@ -75,6 +76,7 @@
                                 <td>${article.title}</td>
                                 <td>${article.viewCount}</td>
                                 <td><a href="/writer/forward/2/${article.id}/editor">修改</a></td>
+                                <td><a href="/writer/forward/${article.id}/delete">删除</a></td>
                             </tr>
                             </#list>
                           </tbody>
